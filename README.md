@@ -226,7 +226,6 @@ homelab-documentation/
 - htop (process monitoring)
 - vim (text editor)
 
----
 
 # About This Project
 
@@ -236,10 +235,9 @@ homelab-documentation/
 **Status:** In Progress (Phase 1 Complete, Phase 2 Planned)
 
 **Contact:**
-- 📧 Email: stanleykafuko@gmail.com
-- 💼 LinkedIn: www.linkedin.com/in/stanley-kafuko-5787b72a8
-- 🐱 GitHub: https://github.com/kstanl
-
+-  Email: stanleykafuko@gmail.com
+-  LinkedIn: www.linkedin.com/in/stanley-kafuko-5787b72a8
+-  GitHub: https://github.com/kstanl
 
 
 #  License
@@ -262,4 +260,4 @@ This project is for educational purposes. Documentation and screenshots are prov
 
 **Note:** This is an ongoing learning project. Updates and improvements are continuously being made as I expand my knowledge of Linux system administration and networking.
 
-For the complete technical documentation with detailed commands and screenshots, see [Home_Lab_Documentation.pdf](Home_Lab_Documentation.pdf).
+For the complete technical documentation with detailed commands and screenshots, see [Home Lab Documentation.pdf].
