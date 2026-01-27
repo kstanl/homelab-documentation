@@ -1,20 +1,19 @@
-# 🖥️ VirtualBox Home Lab - System Integration Practice
+# VirtualBox Home Lab - System Integration Practice
 
-## 🇩🇪 Beschreibung (German)
+# Beschreibung (German)
 
-Ein praktisches Home-Lab-Projekt zur Vorbereitung auf die Ausbildung zum **Fachinformatiker für Systemintegration**. In diesem Projekt habe ich eine virtualisierte Umgebung mit VirtualBox aufgebaut, um grundlegende Systemadministrations- und Netzwerkkonzepte zu erlernen und zu üben.
+In diesem Projekt habe ich eine virtualisierte Umgebung mit VirtualBox aufgebaut, um grundlegende Systemadministrations- und Netzwerkkonzepte zu erlernen und zu üben.
 
 Das Lab umfasst die Installation und Konfiguration eines Ubuntu Server 24.04 LTS, Benutzerverwaltung, SSH-Konfiguration, Linux-Dateiberechtigungen sowie Netzwerk-Troubleshooting.
 
-## 🇬🇧 Description (English)
+# Description (English)
 
-A practical home lab project in preparation for an IT System Integration apprenticeship (Fachinformatiker für Systemintegration). This project involves building a virtualized environment using VirtualBox to learn and practice fundamental system administration and networking concepts.
+This project involves building a virtualized environment using VirtualBox to learn and practice fundamental system administration and networking concepts.
 
 The lab includes Ubuntu Server 24.04 LTS installation and configuration, user management, SSH configuration, Linux file permissions, and network troubleshooting.
 
----
 
-## 🎯 Project Objectives
+# Project Objectives
 
 - Learn practical Linux server administration
 - Understand system service management with systemd
@@ -23,57 +22,61 @@ The lab includes Ubuntu Server 24.04 LTS installation and configuration, user ma
 - Develop network troubleshooting skills
 - Document technical work professionally
 
----
 
-## 🛠️ Lab Environment
 
-### Host System
+# Lab Environment
+
+# Host System
 - **Host OS:** Windows 11 Pro
 - **Virtualization:** Oracle VirtualBox
 
-### Virtual Machines
-| VM Name | OS | Role | Network Mode |
-|---------|----|----|--------------|
-| Ubuntu Server | Ubuntu Server 24.04 LTS | Linux Server | NAT (initial), Bridged (planned) |
-| Windows Client | Windows 10/11 | Client System | NAT/Bridged |
+# Virtual Machines
+# Linux
+VM Name - Ubuntu Server
+OS  - Ubuntu Server 24.04 LTS
+Role - Linux Server
+Network Mode - NAT (initial), Bridged (planned)
 
----
+# Windows
+VM Name - Windows Client
+OS - Windows 10/11
+Role - Client System
+Network Mode - NAT/Bridged
 
-## 📋 Skills Demonstrated
 
-### Linux System Administration
-- ✅ Ubuntu Server 24.04 LTS installation (headless/text-based)
-- ✅ System updates and package management with APT
-- ✅ Installation of common administrative tools (net-tools, curl, wget, htop)
+# Skills Learned
 
-### Network Configuration & Troubleshooting
-- ✅ Network verification with `ip a`, `ip route`, `ping`
-- ✅ Understanding of DHCP and NAT networking
-- ✅ DNS resolution testing
-- ✅ Analysis of NAT networking limitations vs. Bridged mode
+# Linux System Administration
+-  Ubuntu Server 24.04 LTS installation
+-  System updates and package management with APT
+-  Installation of common administrative tools (net-tools, curl, wget, htop)
 
-### Service Management
-- ✅ SSH server installation and configuration
-- ✅ systemd service management (`systemctl` commands)
-- ✅ Understanding of socket-activated vs. continuous services
-- ✅ Service status verification
+# Network Configuration & Troubleshooting
+-  Network verification with `ip a`, `ip route`, `ping`
+-  Understanding of DHCP and NAT networking
+-  DNS resolution testing
+-  Analysis of NAT networking limitations vs. Bridged mode
 
-### User & Permission Management
-- ✅ Creating users with `adduser`
-- ✅ Managing groups and sudo privileges
-- ✅ User permission testing and privilege escalation
-- ✅ File and directory permissions with `chmod` and `chown`
-- ✅ Group-based access control
+# Service Management
+-  SSH server installation and configuration
+-  systemd service management (`systemctl` commands)
+-  Service status verification
 
-### Problem-Solving & Documentation
-- ✅ Identifying and analyzing SSH connection issues
-- ✅ Understanding network topology limitations
-- ✅ Professional technical documentation with screenshots
-- ✅ Systematic troubleshooting methodology
+# User & Permission Management
+-  Creating users with `adduser`
+-  Managing groups and sudo privileges
+-  User permission testing and privilege escalation
+-  File and directory permissions with `chmod` and `chown`
+-  Group-based access control
 
----
+# Problem-Solving & Documentation
+-  Identifying and analyzing SSH connection issues
+-  Understanding network topology limitations
+-  Professional technical documentation with screenshots
+-  Systematic troubleshooting methodology
 
-## 📁 Repository Contents
+
+# Repository Contents
 
 ```
 homelab-documentation/
@@ -91,11 +94,8 @@ homelab-documentation/
     └── lessons_learned.md
 ```
 
----
 
-## 🚀 What I Learned
-
-### Technical Insights
+# What I Learned
 
 **1. Network Topology Matters**
 - Discovered that NAT networking prevents inbound connections by default
@@ -105,19 +105,14 @@ homelab-documentation/
 **2. systemd Service Management**
 - Learned to distinguish between socket-activated and continuously running services
 - Practiced enabling, starting, stopping, and checking service status
-- Understood the importance of service persistence across reboots
+- 
 
-**3. Linux Permission Model**
-- Implemented group-based access control with `chown` and `chmod`
-- Practiced the principle of least privilege
-- Understood numeric permission notation (e.g., 770 = rwxrwx---)
-
-**4. Professional Documentation**
+**3. Professional Documentation**
 - Learned to document not just successes but also failures and their analysis
 - Practiced taking meaningful screenshots for technical documentation
-- Developed systematic troubleshooting methodology
+- 
 
-### Challenges Overcome
+# Challenges Overcome
 
 **Challenge 1: SSH Connection Timeout**
 - **Problem:** SSH connection from Windows host to Ubuntu VM failed with timeout error
@@ -130,44 +125,42 @@ homelab-documentation/
 - **Solution:** Disabled socket activation and enabled standard service mode
 - **Learning:** Different service activation methods serve different use cases
 
----
 
-## 📝 Detailed Lab Steps
+# Detailed Lab Steps
 
-### Phase 1: System Installation & Setup
+# Phase 1: System Installation & Setup
 1. Downloaded Ubuntu Server 24.04 LTS ISO
 2. Created VM in VirtualBox with appropriate resources
 3. Installed Ubuntu Server in text-based mode
 4. Configured user account and network settings
 
-### Phase 2: System Hardening & Updates
+# Phase 2: System Hardening & Updates
 1. Updated system packages: `sudo apt update && sudo apt upgrade -y`
 2. Installed essential tools: `sudo apt install net-tools curl wget htop -y`
 3. Verified system connectivity and DNS resolution
 
-### Phase 3: SSH Configuration
+# Phase 3: SSH Configuration
 1. Installed OpenSSH server: `sudo apt install openssh-server -y`
 2. Configured SSH to run continuously (not socket-activated)
 3. Verified SSH service status: `systemctl status ssh`
 4. Attempted remote connection (identified NAT limitation)
 
-### Phase 4: User Management
+# Phase 4: User Management
 1. Created test user: `sudo adduser testuser`
 2. Granted sudo privileges: `sudo usermod -aG sudo testuser`
 3. Verified user permissions and group membership
 4. Tested privilege escalation
 
-### Phase 5: File Permissions
+# Phase 5: File Permissions
 1. Created shared directory: `sudo mkdir /srv/shared`
 2. Set ownership: `sudo chown root:sudo /srv/shared`
 3. Applied group permissions: `sudo chmod 770 /srv/shared`
 4. Tested access control with different users
 
----
 
-## 🔜 Next Steps
+# Next Steps
 
-### Planned Improvements
+# Planned Improvements
 
 - [ ] **Switch to Bridged Networking**
   - Reconfigure VM network settings
@@ -194,9 +187,8 @@ homelab-documentation/
   - Practice log analysis with `journalctl`
   - Configure log rotation
 
----
 
-## 💡 Key Takeaways
+# Key Takeaways
 
 1. **Hands-on practice is essential** - Reading tutorials is not enough; actually building and breaking things teaches more than any book.
 
@@ -206,24 +198,20 @@ homelab-documentation/
 
 4. **Fundamentals are critical** - Understanding basics like permissions, services, and networking is crucial before moving to advanced topics.
 
-5. **Systematic troubleshooting** - Following a structured approach (verify service → check network → analyze logs) is more effective than random trial-and-error.
 
----
-
-## 🎓 Learning Resources Used
+# Learning Resources Used
 
 - [Ubuntu Server Documentation](https://ubuntu.com/server/docs)
 - [The Linux Command Line by William Shotts](https://linuxcommand.org/tlcl.php)
 - [DigitalOcean Linux Tutorials](https://www.digitalocean.com/community/tags/linux-basics)
 - [NetworkChuck YouTube Channel](https://www.youtube.com/@NetworkChuck)
-- CS50's Introduction to Computer Science (Harvard/edX)
-- Cisco Networking Academy - Networking Basics
+- The Complete Networking Fundamentals Course by David Bombal (https://www.udemy.com/course/complete-networking-fundamentals-course-ccna-start/learn/lecture/47039631?start=0#overview)
 
----
 
-## 🔧 Technical Specifications
 
-### Ubuntu Server Configuration
+# Technical Specifications
+
+# Ubuntu Server Configuration
 - **OS Version:** Ubuntu Server 24.04 LTS
 - **Installation Type:** Minimal (headless)
 - **Disk:** 20 GB dynamically allocated
@@ -231,7 +219,7 @@ homelab-documentation/
 - **CPU:** 2 cores
 - **Network:** NAT (initial), Bridged (planned)
 
-### Software Installed
+# Software Installed
 - OpenSSH Server
 - net-tools (ifconfig, netstat)
 - curl, wget
@@ -240,40 +228,37 @@ homelab-documentation/
 
 ---
 
-## 👤 About This Project
+# About This Project
 
 **Author:** Stanley Kafuko  
 **Purpose:** Career transition preparation - Fachinformatiker für Systemintegration Ausbildung  
-**Date:** January 2026  
+**Date:** December 2025 - ongoing  
 **Status:** In Progress (Phase 1 Complete, Phase 2 Planned)
 
 **Contact:**
 - 📧 Email: stanleykafuko@gmail.com
-- 💼 LinkedIn: [Your LinkedIn Profile]
-- 🐱 GitHub: [Your GitHub Profile]
+- 💼 LinkedIn: www.linkedin.com/in/stanley-kafuko-5787b72a8
+- 🐱 GitHub: https://github.com/kstanl
 
----
 
-## 📄 License
+
+#  License
 
 This project is for educational purposes. Documentation and screenshots are provided as-is for learning and portfolio demonstration.
 
----
 
-## 🙏 Acknowledgments
+#  Acknowledgments
 
 - ReDI School of Digital Integration (München) for foundational IT training
 - Ubuntu community for comprehensive documentation
 - VirtualBox community for virtualization support
 - Online IT communities for troubleshooting guidance
 
----
 
-## 📌 Project Tags
+#  Project Tags
 
 `linux` `ubuntu-server` `system-administration` `virtualization` `virtualbox` `ssh` `networking` `homelab` `learning` `it-ausbildung` `systemintegration` `portfolio-project`
 
----
 
 **Note:** This is an ongoing learning project. Updates and improvements are continuously being made as I expand my knowledge of Linux system administration and networking.
 
