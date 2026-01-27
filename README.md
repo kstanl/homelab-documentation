@@ -1,13 +1,20 @@
-# VirtualBox Home Lab 
+# 🖥️ VirtualBox Home Lab - System Integration Practice
 
-# Description (English)
+## 🇩🇪 Beschreibung (German)
 
-This project involves building a virtualized environment using VirtualBox to learn and practice fundamental system administration and networking concepts.
+Ein praktisches Home-Lab-Projekt zur Vorbereitung auf die Ausbildung zum **Fachinformatiker für Systemintegration**. In diesem Projekt habe ich eine virtualisierte Umgebung mit VirtualBox aufgebaut, um grundlegende Systemadministrations- und Netzwerkkonzepte zu erlernen und zu üben.
+
+Das Lab umfasst die Installation und Konfiguration eines Ubuntu Server 24.04 LTS, Benutzerverwaltung, SSH-Konfiguration, Linux-Dateiberechtigungen sowie Netzwerk-Troubleshooting.
+
+## 🇬🇧 Description (English)
+
+A practical home lab project in preparation for an IT System Integration apprenticeship (Fachinformatiker für Systemintegration). This project involves building a virtualized environment using VirtualBox to learn and practice fundamental system administration and networking concepts.
 
 The lab includes Ubuntu Server 24.04 LTS installation and configuration, user management, SSH configuration, Linux file permissions, and network troubleshooting.
 
+---
 
-# Project Objectives
+## 🎯 Project Objectives
 
 - Learn practical Linux server administration
 - Understand system service management with systemd
@@ -16,10 +23,11 @@ The lab includes Ubuntu Server 24.04 LTS installation and configuration, user ma
 - Develop network troubleshooting skills
 - Document technical work professionally
 
+---
 
-# Lab Environment
+## 🛠️ Lab Environment
 
-# Host System
+### Host System
 - **Host OS:** Windows 11 Pro
 - **Virtualization:** Oracle VirtualBox
 
